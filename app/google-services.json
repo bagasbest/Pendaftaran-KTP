@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "114375649459",
+    "project_id": "pendaftaran-ktp",
+    "storage_bucket": "pendaftaran-ktp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114375649459:android:c03cfbab0af5ccf867a8c6",
+        "android_client_info": {
+          "package_name": "com.pendaftaran.ktp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114375649459-vn86icdbck1cfeghnjh77cj58en2erpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVdk9u7UuiCWYPZgGnqs4MteWs5wzy3Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114375649459-vn86icdbck1cfeghnjh77cj58en2erpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
