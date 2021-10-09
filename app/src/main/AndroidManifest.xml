@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PendaftaranKTP">
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".RegistrationDetailActivity"></activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".utils.RegisterActivity" />
+        <activity android:name=".HomepageActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
