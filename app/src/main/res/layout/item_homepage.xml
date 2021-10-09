@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
+    android:id="@+id/cv"
     android:layout_marginEnd="16dp"
     android:layout_marginTop="16dp">
 
     <View
         android:id="@+id/view4"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="150dp"
         android:background="@drawable/id_rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +21,7 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         app:riv_corner_radius="10dp"
         android:scaleType="centerCrop"
         android:id="@+id/dp"
@@ -38,7 +39,7 @@
         android:maxLines="1"
         android:id="@+id/name"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dp"
@@ -79,8 +80,7 @@
         android:layout_height="25dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/id_rounded"
-        android:backgroundTint="#CDDC39"
+        android:background="@drawable/ic_waiting"
         android:id="@+id/view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -91,6 +91,7 @@
         android:layout_height="wrap_content"
         android:text="Menunggu"
         android:textSize="11sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"

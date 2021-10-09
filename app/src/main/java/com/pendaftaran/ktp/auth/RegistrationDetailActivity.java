@@ -1,4 +1,4 @@
-package com.pendaftaran.ktp;
+package com.pendaftaran.ktp.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

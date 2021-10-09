@@ -1,4 +1,4 @@
-package com.pendaftaran.ktp;
+package com.pendaftaran.ktp.auth;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,11 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
+import com.pendaftaran.ktp.R;
+import com.pendaftaran.ktp.admin.HomepageActivity;
 import com.pendaftaran.ktp.databinding.ActivityLoginBinding;
+import com.pendaftaran.ktp.utils.RegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -22,17 +25,16 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        Glide.with(this)
+                .load(R.drawable.logo)
+                .into(binding.logo);
+
         /// auto login jika udah melakukan login sebelumnya
         autoLogin();
 
         binding.loginBtn.setOnClickListener(view -> formValidation());
 
-        binding.registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        binding.registerBtn.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, RegisterActivity.class)));
 
     }
 

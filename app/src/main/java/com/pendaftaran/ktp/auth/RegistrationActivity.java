@@ -1,4 +1,4 @@
-package com.pendaftaran.ktp;
+package com.pendaftaran.ktp.auth;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -22,8 +22,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.pendaftaran.ktp.R;
 import com.pendaftaran.ktp.databinding.ActivityRegistrationBinding;
-import com.pendaftaran.ktp.utils.RegisterActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -47,6 +47,7 @@ public class RegistrationActivity extends AppCompatActivity {
         binding = ActivityRegistrationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        /// kembali
         binding.backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +55,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
+        /// tambahkan foto formal
         binding.hint1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +67,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
+        /// tambahkan foto tanda tangan
         binding.hint2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +79,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
+        /// tambahkan foto dokumen lain
         binding.otherDocument.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +91,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
+        /// lihat dokumen dokumen lain yang sudah di upload
         binding.seeOtherTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,6 +102,8 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+
+        /// klik registrasi
         binding.registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -238,6 +249,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private void uploadArticleDp(Uri data, String option) {
         StorageReference mStorageRef = FirebaseStorage.getInstance().getReference();
         ProgressDialog mProgressDialog = new ProgressDialog(this);
@@ -268,6 +280,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                                 .into(binding.tandaTangan);
                                     } else {
                                         document.add(uri.toString());
+                                        binding.otherDocument.setText("Dokumen sudah ditambahkan (" + document.size() + ")");
                                     }
                                     Toast.makeText(RegistrationActivity.this, "Berhasil mengunggah gambar", Toast.LENGTH_SHORT).show();
                                 })

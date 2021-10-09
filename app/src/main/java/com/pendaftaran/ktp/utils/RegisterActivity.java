@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.pendaftaran.ktp.HomepageActivity;
+import com.pendaftaran.ktp.admin.HomepageActivity;
 import com.pendaftaran.ktp.R;
 import com.pendaftaran.ktp.databinding.ActivityRegisterBinding;
 import java.util.HashMap;

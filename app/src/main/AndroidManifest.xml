@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PendaftaranKTP">
-        <activity android:name=".RegistrationDetailActivity"></activity>
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".admin.HomepageDetail"></activity>
+        <activity android:name=".auth.RegistrationDetailActivity" />
+        <activity android:name=".auth.RegistrationActivity" />
         <activity android:name=".utils.RegisterActivity" />
-        <activity android:name=".HomepageActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".admin.HomepageActivity" />
+        <activity android:name=".auth.LoginActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
