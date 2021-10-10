@@ -276,7 +276,7 @@ public class RegistrationActivity extends AppCompatActivity {
                                         binding.hint2.setVisibility(View.GONE);
                                         Glide
                                                 .with(this)
-                                                .load(dp)
+                                                .load(sign)
                                                 .into(binding.tandaTangan);
                                     } else {
                                         document.add(uri.toString());

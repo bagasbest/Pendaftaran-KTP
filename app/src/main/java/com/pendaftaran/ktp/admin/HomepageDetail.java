@@ -42,7 +42,7 @@ public class HomepageDetail extends AppCompatActivity {
         }
 
         Glide.with(this)
-                .load(model.getSign())
+                .load(model.getDp())
                 .into(binding.dp);
 
         Glide.with(this)
